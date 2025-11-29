@@ -32,7 +32,7 @@ pipeline {
         stage('Build & Tag Docker Image') {
             steps {
                 script {
-                   withDockerRegistry(credentialsId: 'docker-cred', url: 'https://hub.docker.com/repositories/eveojong') {
+                   withDockerRegistry(credentialsId: 'docker-cred', url: '') {
                             sh "docker build -t eveojong/java-maven-app:1.0 ."
                    }    
                 }     
@@ -41,7 +41,7 @@ pipeline {
         stage('Push Docker Image') {
             steps {
                 script {
-                    withDockerRegistry(credentialsId: 'docker-cred', url: 'https://hub.docker.com/repositories/eveojong') {
+                    withDockerRegistry(credentialsId: 'docker-cred', url: '') {
                     sh "docker push eveojong/java-maven-app:1.0"
                     }
                 } 
