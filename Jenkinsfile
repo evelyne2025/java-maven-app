@@ -42,7 +42,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred', url: '') {
-                    sh "docker push eveojong/java-maven-app:1.0"
+                    sh "docker push eveojong/java-maven-app:1.1"
                     }
                 } 
             }
