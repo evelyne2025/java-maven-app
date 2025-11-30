@@ -33,7 +33,7 @@ pipeline {
             steps {
                 script {
                    withDockerRegistry(credentialsId: 'docker-cred', url: '') {
-                            sh "docker build -t eveojong/java-maven-app:1.0 ."
+                            sh "docker build -t eveojong/java-maven-app:1.1 ."
                    }    
                 }     
             } 
